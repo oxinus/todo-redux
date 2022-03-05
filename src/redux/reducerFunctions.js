@@ -1,4 +1,4 @@
-export const completed__task =(state ,taskID) => {
+export const completed__task = (state ,taskID) => {
     const completedList = state.map(row => {
         if (row.id === taskID){
             return{
@@ -17,4 +17,9 @@ export const completed__task =(state ,taskID) => {
 export const delete__task = (state, taskID) => {
     const newList = state.filter(row => row.id !== taskID)
     return newList;
+}
+
+
+export const edit__task = (todo, taskID) => {
+    
 }
