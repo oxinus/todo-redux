@@ -13,3 +13,8 @@ export const completed__task =(state ,taskID) => {
     return completedList
 }
 
+
+export const delete__task = (state, taskID) => {
+    const newList = state.filter(row => row.id !== taskID)
+    return newList;
+}

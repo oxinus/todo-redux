@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from 'uuid';
-import {ADD_TASK, COMPLETE_TASK, DELETE_TASK} from './actionTypes';
-import {completed__task} from './reducerFunctions';
+import { ADD_TASK, COMPLETE_TASK, DELETE_TASK } from './actionTypes';
+import { completed__task, delete__task } from './reducerFunctions';
 
 const initialState = []
 
@@ -14,6 +14,7 @@ const todoReducer = (state = initialState, action) => {
             completed__task(state, action.paylod.id)
 
         case DELETE_TASK:
+            delete__task(state, action.paylod.id)
     }
 
 }
