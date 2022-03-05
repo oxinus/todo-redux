@@ -1,9 +1,10 @@
-import React from 'react'
+import React from 'react';
+import './AddTodo.css';
 
 const AddTodo = () => {
     return (
-        <div>
-            
+        <div className='addtodo__container'>
+            <input />
         </div>
     )
 }

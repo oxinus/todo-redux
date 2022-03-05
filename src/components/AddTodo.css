@@ -1,0 +1,9 @@
+.addtodo__container{
+
+}
+.addtodo__container input{
+    outline: 0;
+    border: none;
+    border-radius: 2px;
+    padding: 10px 6px;
+}
