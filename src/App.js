@@ -1,8 +1,12 @@
+import AddTodo from './components/AddTodo';
+import ShowTodo from './components/ShowTodo';
+import './App.css'
 
 function App() {
   return (
-    <div>
-     todo redux
+    <div className='app'>
+      <AddTodo />
+      <ShowTodo />
     </div>
   );
 }
