@@ -4,11 +4,12 @@ import ShowTodo from './ShowTodo';
 
 const Todos = () => {
 
-    const todos = useSelector()
+    const todos = useSelector(state => state)
+    console.log(todos)
 
     return (
         <div>
-            {todos.map(todo => (<ShowTodo  key={todo.id}/>))}
+            {todos?.map(todo => (<ShowTodo  key={todo.id}/>))}
         </div>
     )
 }

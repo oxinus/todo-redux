@@ -8,18 +8,18 @@ const initialState = []
 const todoReducer = (state = initialState, action) => {
     switch (action.type){
         case ADD_TASK:
-            return ([...state, {todo : action.paylod.data, id:uuidv4(), completed : false}]);
+            return ([...state, {todo : action.payload.data, id:uuidv4(), completed : false}]);
 
         case COMPLETE_TASK:
-            completed__task(state, action.paylod.id);
+            completed__task(state, action.payload.id);
             break;
 
         case DELETE_TASK:
-            delete__task(state, action.paylod.id);
+            delete__task(state, action.payload.id);
             break;
 
         case EDIT_TASK:
-            edit__task(action.paylod.data, action.paylod.id);
+            edit__task(action.payload.data, action.payload.id);
     }
 
 }

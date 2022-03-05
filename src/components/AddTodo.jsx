@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
-import {addTask} from '../redux/bindActions';
-import {useDispatch} from 'react-redux';
+import { addTask } from '../redux/bindActions';
+import { useDispatch } from 'react-redux';
 import './AddTodo.css';
 
 const AddTodo = () => {
