@@ -6,4 +6,16 @@
     border: none;
     border-radius: 2px;
     padding: 10px 6px;
+    width: 350px;
+    font-size: 1rem;
+}
+.addtodo__container button{
+    outline: 0;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.fa-plus {
+    color: green;
+    font-size: 18px;
 }
