@@ -1,5 +1,5 @@
 import AddTodo from './components/AddTodo';
-import ShowTodo from './components/ShowTodo';
+import Todos from './components/Todos';
 import { Provider } from 'react-redux';
 import {store} from './redux/store';
 import './App.css'
@@ -9,7 +9,7 @@ function App() {
     <Provider store={store}>
       <div className='app'>
         <AddTodo />
-        <ShowTodo />
+        <Todos />
       </div>
     </Provider>
   );
