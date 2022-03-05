@@ -1,9 +1,14 @@
 import React from 'react'
 
-const ShowTodo = () => {
+const ShowTodo = ({todo}) => {
     return (
         <div>
-            
+            <p>{todo.todo}</p>
+            <div>
+                <button></button>
+                <button></button>
+                <button></button>
+            </div>
         </div>
     )
 }
