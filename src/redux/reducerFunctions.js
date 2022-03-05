@@ -1,4 +1,4 @@
-export const completedTask =(state ,taskID) => {
+export const completed__Task =(state ,taskID) => {
     const completedList = state.map(row => {
         if (row.id === taskID){
             return{
