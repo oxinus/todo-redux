@@ -8,9 +8,7 @@ const Todos = () => {
 
     return (
         <div>
-            {todos.map(todo => {
-                
-            })}
+            {todos.map(todo => (<ShowTodo  key={todo.id}/>))}
         </div>
     )
 }
