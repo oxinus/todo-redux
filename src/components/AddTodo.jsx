@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import {addTask} from '../redux/actions';
 import './AddTodo.css';
 
 const AddTodo = () => {
+
+    const ref = useRef();
+
+    const addTodoHandler =() => {
+        addTask(ref.current.value)
+    }
+
     return (
         <div className='addtodo__container'>
-            <input />
-            <button><i className='fas fa-plus'></i></button>
+            <input ref={ref}/>
+            <button onClick={addTodoHandler}><i className='fas fa-plus'></i></button>
         </div>
     )
 }
