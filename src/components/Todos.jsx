@@ -1,9 +1,15 @@
-import React from 'react'
+import React from 'react';
+import { useSelector } from 'react-redux';
 
 const Todos = () => {
+
+    const todos = useSelector()
+
     return (
         <div>
-            
+            {todos.map(todo => {
+                
+            })}
         </div>
     )
 }
