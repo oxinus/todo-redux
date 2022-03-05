@@ -8,14 +8,17 @@ const AddTodo = () => {
     const ref = useRef();
     const dispatch = useDispatch();
 
-    const addTodoHandler =() => {
+    const addTodoHandler = e => {
+        e.preventDefault()
         dispatch(addTask(ref.current.value))
     }
 
     return (
         <div className='addtodo__container'>
-            <input ref={ref}/>
-            <button onClick={addTodoHandler}><i className='fas fa-plus'></i></button>
+            <form onSubmit={addTodoHandler}>
+                <input ref={ref}/>
+                <button type='submit'><i className='fas fa-plus'></i></button>
+            </form>
         </div>
     )
 }
