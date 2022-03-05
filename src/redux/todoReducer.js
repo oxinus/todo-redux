@@ -1,10 +1,5 @@
 import { v4 as uuidv4 } from 'uuid';
-
-// action types 
-const DELETE_TASK = 'delete-task';
-const ADD_TASK = 'add-task';
-const EDIT_TASK = 'edit-task';
-const COMPLETE_TASK = 'complete-task';
+import {ADD_TASK} from './actionTypes';
 
 const initialState = []
 
