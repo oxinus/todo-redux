@@ -1,22 +1,9 @@
 import { v4 as uuidv4 } from 'uuid';
-import {ADD_TASK, COMPLETE_TASK} from './actionTypes';
+import {ADD_TASK, COMPLETE_TASK, DELETE_TASK} from './actionTypes';
+import {completedTask} from './reducerFunctions';
 
 const initialState = []
 
-const completedTask =(state ,taskID) => {
-    const completedList = state.map(row => {
-        if (row.id === taskID){
-            return{
-                todo : row.todo,
-                id : row.id,
-                completed : true
-            }
-        } else{
-            return row
-        }
-    })
-    return completedList
-}
 
 const todoReducer = (state = initialState, action) => {
     switch (action.type){
@@ -25,6 +12,9 @@ const todoReducer = (state = initialState, action) => {
 
         case COMPLETE_TASK:
             completedTask(state, action.paylod.id)
+
+        case DELETE_TASK:
+
     }
 
 }
