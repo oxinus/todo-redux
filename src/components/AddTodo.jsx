@@ -1,13 +1,15 @@
 import React, { useRef } from 'react';
 import {addTask} from '../redux/actions';
+import {useDispatch} from 'react-redux';
 import './AddTodo.css';
 
 const AddTodo = () => {
 
     const ref = useRef();
+    const dispatch = useDispatch();
 
     const addTodoHandler =() => {
-        addTask(ref.current.value)
+        dispatch(addTask(ref.current.value))
     }
 
     return (
