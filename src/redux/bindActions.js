@@ -1,4 +1,4 @@
-import  {ADD_TASK, COMPLETE_TASK, DELETE_TASK, EDIT_TASK } from './actionTypes';
+import  {ADD_TASK, COMPLETE_TASK, DELETE_TASK } from './actionTypes';
 
 export const addTask = (data) => {
     return {
@@ -10,7 +10,7 @@ export const addTask = (data) => {
 }
 
 
-export const completeTask =(id) => {
+export const completeTask = (id) => {
     return{
         type : COMPLETE_TASK,
         payload : {
@@ -25,16 +25,6 @@ export const deleteTask = (id) => {
         type : DELETE_TASK,
         payload : {
             id
-        }
-    }
-}
-
-
-export const editTask = (todo, id) => {
-    return{
-        type : EDIT_TASK,
-        payload : {
-            todo, id
         }
     }
 }

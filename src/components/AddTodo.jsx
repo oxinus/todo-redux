@@ -1,7 +1,6 @@
 import React, { useRef } from 'react';
 import { addTask } from '../redux/bindActions';
 import { useDispatch } from 'react-redux';
-import './AddTodo.css';
 
 const AddTodo = () => {
 
@@ -10,16 +9,25 @@ const AddTodo = () => {
 
     const addTodoHandler = e => {
         e.preventDefault()
-        dispatch(addTask(ref.current.value))
+        if (ref.current.value.trim()){
+            dispatch(addTask(ref.current.value))
+            ref.current.value = ''
+        }
     }
 
     return (
-        <div className='addtodo__container'>
-            <form onSubmit={addTodoHandler}>
-                <input ref={ref}/>
-                <button type='submit'><i className='fas fa-plus'></i></button>
+        <>
+            <h6 className="mb-3">Awesome Todo List</h6>
+
+            <form className="d-flex justify-content-center align-items-center mb-4" onSubmit={addTodoHandler}>
+                <div className="form-outline flex-fill">
+                    <input type="text" id="form3" className="form-control form-control-lg" ref={ref} />
+                    <label className="form-label" htmlFor="form3">What do you need to do today?</label>
+                </div>
+                <button type="submit" className="btn btn-primary btn-lg ms-2 " style={{marginBottom : '32px'}}>Add</button>
             </form>
-        </div>
+
+        </>
     )
 }
 
